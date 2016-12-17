@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment0.text=\r\n\ [This\ is\ important]Enter\ the\ file\ name\ without\ txt\!\r\n\ If\ user\ input\ file\ name(not\ include\ .txt)\ from\ command\ line,\ it\ uses\ default\ file.\r\n\ If\ default\ file\ does\ not\ exist,\ it\ creat\ the\ default\ file,\ and\ plug\ file\ into\ FileScanner\r\n\ @param\ <args\:\ accept\ user\ input\ file\ name\ from\ command\ line>\r\n
+numComments=1

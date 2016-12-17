@@ -1,0 +1,19 @@
+Read|Books I have read
+Want to Read|Books I want to read
+Computers|Computers, IT, Computer Science, IT and Society books
+Fiction|
+Non-Fiction|
+####
+Catch-22|Joseph Heller|1961#Fiction|Read
+Dirk Gently's Holistic Detective Agency|Douglas Adams|1987#
+How to Create a Mind|Ray Kurweil|2012#Computers|Read
+Clearing The Plains|James Daschuk|2013#Read|Non-Fiction
+####
+Catch-22|2015-11-03 09:01:16
+Quite possibly the best work of fiction ever. 
+Heller captures the absurdity of life in a way no other author
+ever has.
+#
+How to Create a Mind|2015-11-03 09:01:16
+A must read for anyone interested in AI. 
+#

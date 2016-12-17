@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=comment
+comment0.target=Review(java.lang.String)
+comment1.params=comment\ time
+comment1.target=Review(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getTime()
+comment3.params=
+comment3.target=java.lang.String\ getComment()
+comment4.params=
+comment4.target=void\ stampTime()
+comment4.text=\r\n\ set\ up\ a\ time\ stamp\ \r\n
+comment5.params=tempReview
+comment5.target=int\ compareTo(Review)
+comment5.text=\r\n\ override\ the\ compareTo\ in\ the\ Comparable\ interface\r\n\ TreeSer<Review>\ in\ the\ book\ class\ will\ use\ Comparable\ to\ put\ reviews\ in\ the\ order\r\n\ @param\ <obj>\r\n\ @return\ <an\ integer\:\ \=\=0\:\ equal,\ <0\:\ this<obj,\ >0\ this>obj\ >\r\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

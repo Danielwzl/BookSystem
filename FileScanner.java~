@@ -1,0 +1,123 @@
+import java.io.FileInputStream;
+import java.util.Scanner;
+import java.util.ArrayList;
+
+/**
+ * This class is for reading the file, creat objects and store them into ArrayLists
+ * @author  Zilong Wang 
+ * @version 1.0 
+ * Last Modified: <11-18-2015> - <adding comments> <Zilong Wang>                           
+ */
+public class FileScanner
+{
+    private ArrayList<Shelf> allShelves;
+    private ArrayList<Book> allBooks;
+    private Scanner scan;
+
+    public FileScanner(FileInputStream file, String fileName, GreatReadsMenu menu)
+    {
+        allShelves = new ArrayList<Shelf>();
+        allBooks = new ArrayList<Book>();
+        scan = new Scanner(file);
+        if(scan.hasNext()) importFromFile();
+        new OperationSystem(allShelves, allBooks, menu);
+    }
+
+    /**
+     * import all data from the file
+     */
+    private void importFromFile()
+    {
+        importShelves();
+        importBooks();
+        importReview();
+    }
+
+    /**
+     * import shelf section from the file
+     */
+    private void importShelves()
+    {
+        while(!scan.hasNext("####"))
+            allShelves.add(generateNewShelf(scan.nextLine().split("\\|")));
+        scan.nextLine();
+    }
+
+    /**
+     * import book section from the file
+     */
+    private void importBooks()
+    {
+        Book book = null;
+        String[] info = null;
+        while(!scan.hasNext("####"))
+        {
+            allBooks.add(book = generateNewBook(info = scan.nextLine().split("#")));
+            if(info.length > 1) putBookOnShelf(info[1].split("\\|"), book);
+        }
+        scan.nextLine(); // clear the ####
+    }
+
+    /**
+     * creat a book object
+     * @param <info>
+     * @return <Book object>
+     */
+    private Book generateNewBook(String[] info)
+    {
+        String[] subInfo = info[0].split("\\|");
+        return new Book(subInfo[0], subInfo[1], Integer.valueOf(subInfo[2]));
+    }
+
+    /**
+     * put 
+     */
+    private void putBookOnShelf(String[] shelfNames, Book book)
+    {
+        for(String name: shelfNames)
+            
+            for(Shelf shelf: allShelves)
+                if(shelf.getName().equals(name))
+                    shelf.addBookOnShelf(book);
+    }
+
+    private Shelf generateNewShelf(String[] info)
+    {
+        if(info.length > 1) return new Shelf(info[0], info[1]);
+        return new Shelf(info[0]);
+    }
+
+    private void importReview()
+    {
+        String comment = "";
+        String[] info = null;
+        int index = 0;
+        while(scan.hasNext())
+        {
+            comment = "";
+            info = scan.nextLine().split("\\|");
+            if(index != -1) allBooks.get(findBooksWithReview(info[0]))
+                .addReview(generateNewReview(importOneReviewSection(comment), info));
+            scan.nextLine();
+        }
+    }
+
+    private String importOneReviewSection(String comment)
+    {
+        while(!scan.hasNext("#")) 
+            comment += ("\r\n" + scan.nextLine());
+        return comment;
+    }
+
+    private int findBooksWithReview(String bookOn)
+    {
+        for(int i = 0, length = allBooks.size(); i < length; i++)
+            if(bookOn.equals(allBooks.get(i).getTitle())) return i;
+        return -1; //never return -1 in this case
+    }
+
+    private Review generateNewReview(String comment, String[] info)
+    {
+        return new Review(comment, info[1]);
+    }
+}

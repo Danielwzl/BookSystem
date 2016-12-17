@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=name
+comment0.target=Shelf(java.lang.String)
+comment1.params=name\ description
+comment1.target=Shelf(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=
+comment3.target=java.lang.String\ getDescription()
+comment4.params=
+comment4.target=java.util.ArrayList\ getBooksOnThisShelf()
+comment5.params=book
+comment5.target=void\ removeBookOnShelf(Book)
+comment5.text=\r\n\ Dependency\ Injection\r\n\ remove\ book\ both\ from\ shelf\ and\ book\ object\ \r\n\ @param\ <book>\r\n
+comment6.params=book
+comment6.target=void\ removeBook(Book)
+comment6.text=\r\n\ remove\ book\ only\ from\ shelf\ object\r\n\ @param\ <book>\r\n
+comment7.params=book
+comment7.target=void\ addBookOnShelf(Book)
+comment7.text=\r\n\ add\ new\ book\ into\ arraylist\r\n\ @param\ <book>\r\n
+comment8.params=obj
+comment8.target=boolean\ equals(java.lang.Object)
+comment8.text=\r\n\ see\ if\ two\ shelf\ are\ the\ same\ one\r\n\ @param\ <obj>\r\n\ @return\ <true\ if\ they\ are\ same>\r\n
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=10

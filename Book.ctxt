@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.params=title\ author\ year
+comment0.target=Book(java.lang.String,\ java.lang.String,\ int)
+comment1.params=
+comment1.target=java.lang.String\ getTitle()
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=java.util.TreeSet\ getReview()
+comment3.params=
+comment3.target=int\ getYear()
+comment4.params=
+comment4.target=java.lang.String\ getAuthor()
+comment5.params=
+comment5.target=java.util.ArrayList\ getShelvesHasThisBook()
+comment6.params=shelfHasThisBook
+comment6.target=void\ setShelvesHasThisBook(java.util.ArrayList)
+comment7.params=shelfForRemove
+comment7.target=void\ removeShelfHasTheBook(Shelf)
+comment7.text=\r\n\ remove\ shelf\ from\ arraylist\r\n\ @param\ <shelfForRemove>\r\n
+comment8.params=review
+comment8.target=void\ addReview(Review)
+comment8.text=\r\n\ add\ review\r\n\ @param\ <review>\r\n
+comment9.params=obj
+comment9.target=boolean\ equals(java.lang.Object)
+comment9.text=\r\n\ check\ if\ two\ book\ are\ the\ same\ one\r\n\ @param\ <obj>\r\n\ @return\ <true\ if\ they\ are\ same\ one>\r\n
+numComments=11

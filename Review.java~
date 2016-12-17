@@ -1,0 +1,49 @@
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+
+/**
+ * this class is the entity of each review
+ */
+public class Review
+{
+    public static SimpleDateFormat timeFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); 
+    public String time;
+    public String comment;
+
+    public Review(String comment)
+    {
+        this.comment = comment; 
+        stampTime();
+    }
+
+    public Review(String comment, String time)
+    {
+        this(comment);
+        this.time = time;
+    }
+
+    public String getTime(){return time;}
+    
+    /**
+     * set up a time stamp 
+     */
+    private void stampTime()
+    {
+        this.time = timeFormat.format(new Timestamp(System.currentTimeMillis()));
+    }
+    
+    public boolean equals(Object obj)
+    {
+        if(!(obj instanceof Review)) return false;
+        return this.time == ((Review)obj).time;
+    }
+    
+    public boolean compare(Review r1, Review r2)
+    {
+        return r1.time.compareTo(r2.time);
+    }
+
+    public String getComment(){return comment;}
+
+    public String toString(){return "[" + time + "]" + comment;}
+}
